@@ -1,0 +1,22 @@
+/* Keep short Russian words with their phrase; balance headings and text tails. */
+:is(h1, h2, h3, h4) {
+  text-wrap: balance;
+  hyphens: none;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+:is(p, figcaption, .corp__addr, .space__description) {
+  text-wrap: pretty;
+  hyphens: none;
+  word-break: normal;
+}
+.meaning-manifest__line:last-child {
+  display: flex;
+  align-items: baseline;
+  gap: clamp(8px, 1.2vw, 20px);
+}
+.meaning-manifest__line:last-child small { margin-bottom: 0; }
+@media (max-width: 399px) {
+  .graphic-edition .merch__title { font-size: 28px; }
+  .graphic-edition .type-poster__glyph { font-size: 130px; }
+}

@@ -24,7 +24,7 @@ document.querySelectorAll('.kinetic').forEach(el => {
     [...node.childNodes].forEach(child => {
       if (child.nodeType === 3) {
         const frag = document.createDocumentFragment();
-        child.textContent.split(/(\s+)/).forEach(part => {
+        child.textContent.split(/([ \t\r\n]+)/).forEach(part => {
           if (!part.trim()) { frag.appendChild(document.createTextNode(part)); return; }
           const w = document.createElement('span');
           w.className = 'w';
