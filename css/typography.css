@@ -10,24 +10,43 @@
   hyphens: none;
   word-break: normal;
 }
-.meaning-manifest__line:nth-child(2) { margin-left: 8%; }
-.meaning-manifest__line:nth-child(3) {
+/* Optical centres progress by equal steps despite different word widths. */
+.meaning-manifest__statement {
+  --manifest-label-space: clamp(28px, 3vw, 44px);
+  display: grid;
+  max-inline-size: 10.5em;
+  margin-inline: auto;
+  row-gap: clamp(26px, 2.8vw, 44px);
+  line-height: 1.08;
+}
+.meaning-manifest__line {
+  position: relative;
   display: flex;
   align-items: baseline;
-  margin-left: 16%;
   gap: 0;
+  margin: 0;
+  padding: var(--manifest-label-space) 0 0;
+}
+.meaning-manifest__line:nth-child(2) { margin-left: .5em; }
+.meaning-manifest__line:nth-child(3) { margin-left: 2.2em; }
+.meaning-manifest__line small {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  font-size: clamp(14px, 1.25vw, 18px);
 }
 .meaning-manifest__line:nth-child(3) small {
+  position: relative;
+  top: auto;
+  left: -1.7em;
   flex: 0 0 0;
   width: 0;
-  position: relative;
-  left: -1.8em;
   white-space: nowrap;
-  margin-bottom: 0;
 }
+.meaning-manifest__word { flex: 0 0 auto; white-space: nowrap; }
 @media (max-width: 599px) {
-  .meaning-manifest__line:nth-child(2) { margin-left: 4%; }
-  .meaning-manifest__line:nth-child(3) { margin-left: 8%; }
+  .meaning-manifest__statement { font-size: clamp(26px, 8.4vw, 50px); }
 }
 @media (max-width: 399px) {
   .graphic-edition .merch__title { font-size: 28px; }
