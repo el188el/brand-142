@@ -1,0 +1,4 @@
+/* Independent transform keeps scroll drift separate from reveal's translate. */
+.graphic-edition .is-scroll-floating{transform:translate3d(0,var(--photo-drift-y,0px),0);will-change:transform}
+html.no-js .graphic-edition .is-scroll-floating{transform:none}
+@media(prefers-reduced-motion:reduce){.graphic-edition .is-scroll-floating{transform:none!important;will-change:auto}}

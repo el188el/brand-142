@@ -1,0 +1,41 @@
+/* A spacious, sharp vector assembly held in the viewport while scrolling. */
+.graphic-edition .build--vector{height:260svh}
+.graphic-edition .build--vector .build__sticky{position:sticky;top:0;display:block;height:100svh;min-height:0;padding:clamp(78px,9svh,108px) var(--pad) clamp(28px,4svh,52px);overflow:hidden}
+.graphic-edition .build--vector .build__inner{width:100%;height:100%;display:grid;grid-template-rows:auto auto minmax(0,1fr) auto;gap:clamp(18px,2.8svh,34px);align-items:center;justify-items:center}
+.graphic-edition .build--vector .eyebrow{margin:0}
+.graphic-edition .build--vector .build__title{max-width:24ch;margin:0;font-size:clamp(30px,3.9vw,60px);line-height:1.16;text-wrap:balance}
+.graphic-edition .build--vector .build__canvas{height:min(54svh,560px);max-height:100%;width:auto;max-width:calc(100vw - var(--pad)*2);min-height:0;min-width:0;aspect-ratio:122/158;align-self:center;justify-self:center;overflow:visible}
+.build__assembly{position:absolute;inset:0;display:block;width:100%;height:100%;overflow:visible;opacity:0;pointer-events:none}
+.build__assembly [data-logo-piece]{transform-origin:0 0;opacity:0}
+.graphic-edition .build--vector .build__real{opacity:0}
+.graphic-edition .build--vector .is-assembly-ready .build__assembly{opacity:1}
+.graphic-edition .build--vector .is-assembly-ready .build__real{opacity:0}
+.graphic-edition .build--vector .build__notes{max-width:640px;margin:0}
+.graphic-edition .build--vector .build__notes p{font-size:clamp(13px,1.1vw,16px);line-height:1.65;max-width:58ch;margin:0}
+@media(max-width:699px){
+ .graphic-edition .build--vector{height:220svh}
+ .graphic-edition .build--vector .build__sticky{padding-top:80px;padding-bottom:30px}
+ .graphic-edition .build--vector .build__inner{gap:clamp(18px,2.7svh,26px)}
+ .graphic-edition .build--vector .build__title{font-size:clamp(25px,7.4vw,38px);max-width:18ch}
+ .graphic-edition .build--vector .build__canvas{height:min(50svh,calc((100vw - var(--pad)*2)*158/122))}
+ .graphic-edition .build--vector .build__notes p{font-size:13px;line-height:1.6}
+}
+@media(max-height:650px) and (min-width:700px){
+ .graphic-edition .build--vector .build__sticky{padding-top:72px;padding-bottom:22px}
+ .graphic-edition .build--vector .build__inner{gap:14px}
+ .graphic-edition .build--vector .build__title{font-size:clamp(28px,3.4vw,42px)}
+ .graphic-edition .build--vector .build__notes p{font-size:13px;max-width:68ch}
+}
+html.no-js .graphic-edition .build--vector{height:auto}
+html.no-js .graphic-edition .build--vector .build__sticky{position:static;height:auto;min-height:100svh}
+html.no-js .graphic-edition .build--vector .build__inner{height:auto;grid-template-rows:none}
+html.no-js .graphic-edition .build--vector .build__canvas{max-height:none}
+html.no-js .graphic-edition .build--vector .build__real{opacity:1}
+@media(prefers-reduced-motion:reduce){
+ .graphic-edition .build--vector{height:auto}
+ .graphic-edition .build--vector .build__sticky{position:static;height:auto;min-height:100svh}
+ .graphic-edition .build--vector .build__inner{height:auto;grid-template-rows:none}
+ .graphic-edition .build--vector .build__canvas{max-height:none}
+ .graphic-edition .build--vector .build__canvas .build__real{opacity:1}
+ .graphic-edition .build--vector .build__canvas .build__assembly{opacity:0}
+}

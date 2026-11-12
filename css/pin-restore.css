@@ -1,0 +1,21 @@
+/* All photograph pins remain interactive; a detail name appears on demand. */
+.graphic-edition .shot--c .hotspot__connections .connection-line{display:none}
+.graphic-edition .shots .shot .hotspot .hotspot__tip{
+  display:block;
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transform:translateY(5px);
+  transition:opacity .18s ease,transform .18s ease,visibility .18s;
+}
+.graphic-edition .shots .shot .hotspot:hover .hotspot__tip,
+.graphic-edition .shots .shot .hotspot:focus-visible .hotspot__tip,
+.graphic-edition .shots .shot .hotspot.is-linked .hotspot__tip,
+.graphic-edition .shots .shot .hotspot.is-active .hotspot__tip{
+  opacity:1;
+  visibility:visible;
+  transform:none;
+}
+@media(prefers-reduced-motion:reduce){
+  .graphic-edition .shots .shot .hotspot .hotspot__tip{transition:none}
+}

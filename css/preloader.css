@@ -1,0 +1,101 @@
+/* A short identity signature, drawn entirely in vectors. */
+.brand-preloader{
+  --intro-paper:#F2F3F7;--intro-navy:#1E213D;--intro-ochre:#E3A63D;
+  position:fixed;inset:0;z-index:10000;isolation:isolate;display:none;
+  place-items:center;overflow:hidden;color:var(--intro-paper);background:transparent;
+  touch-action:none;cursor:progress;pointer-events:auto;
+  animation:brand-intro-deadline 0s 2.4s forwards;
+}
+html.is-loading .brand-preloader,.brand-preloader.is-leaving{display:grid}
+.brand-preloader::before,.brand-preloader::after{
+  content:"";position:absolute;z-index:-2;top:0;bottom:0;width:calc(50% + 1px);
+  background:var(--intro-navy);transition:transform .42s cubic-bezier(.76,0,.24,1);
+}
+.brand-preloader::before{left:0}
+.brand-preloader::after{right:0}
+.brand-preloader__orbit{
+  position:absolute;z-index:-1;left:-34vmax;top:calc(50% - 52vmax);
+  width:104vmax;height:104vmax;border:1px solid rgba(242,243,247,.075);border-radius:50%;
+  pointer-events:none;transition:opacity .2s ease;
+}
+.brand-preloader__orbit::after{
+  content:"";position:absolute;top:14.6%;right:14.6%;width:7px;height:7px;
+  border-radius:50%;background:var(--intro-ochre);
+}
+.brand-preloader__top,.brand-preloader__bottom{
+  position:absolute;left:clamp(24px,4.5vw,80px);right:clamp(24px,4.5vw,80px);
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+  font:400 10px/1.5 GolosText,Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;
+  transition:opacity .18s ease,transform .24s ease;
+}
+.brand-preloader__top{top:clamp(25px,4.5vh,52px)}
+.brand-preloader__top span:last-child{opacity:.42}
+.brand-preloader__bottom{bottom:clamp(25px,4.5vh,52px);color:rgba(242,243,247,.42)}
+.brand-preloader__signal{display:flex;align-items:center;gap:9px;color:rgba(242,243,247,.66)}
+.brand-preloader__signal::before{content:"";display:block;width:5px;height:5px;border-radius:50%;background:var(--intro-ochre)}
+.brand-preloader__center{
+  display:flex;flex-direction:column;align-items:center;gap:clamp(26px,4.5vh,46px);
+  padding:78px 24px;transform:translateY(-6px);
+  transition:opacity .2s ease,transform .32s cubic-bezier(.4,0,.2,1);
+}
+.brand-preloader__mark{display:block;width:clamp(150px,21vw,235px);height:auto;overflow:visible}
+.brand-preloader__mark .intro-solid{fill:var(--intro-paper)}
+.brand-preloader__mark .intro-stroke{stroke:var(--intro-paper)}
+.brand-preloader__roof,.brand-preloader__body{
+  stroke-dasharray:1;stroke-dashoffset:1;animation:intro-draw .38s cubic-bezier(.22,.68,0,1) forwards;
+}
+.brand-preloader__roof{animation-delay:25ms}
+.brand-preloader__body{animation-delay:calc(115ms + var(--piece,0)*35ms)}
+.brand-preloader__pillar{
+  opacity:0;transform:translateY(11px);animation:intro-piece .34s cubic-bezier(.16,1,.3,1) 115ms forwards;
+}
+.brand-preloader__head{
+  opacity:0;transform-box:fill-box;transform-origin:center;transform:translateY(12px) scale(.5);
+  animation:intro-head .3s cubic-bezier(.16,1,.3,1) calc(145ms + var(--piece,0)*35ms) forwards;
+}
+.brand-preloader__mark .brand-preloader__head--center{fill:var(--intro-ochre)}
+.brand-preloader__digit{
+  opacity:0;transform:translateY(9px);animation:intro-piece .32s cubic-bezier(.16,1,.3,1) calc(225ms + var(--piece,0)*30ms) forwards;
+}
+.brand-preloader__wordmark{opacity:0;transform:translateY(6px);animation:intro-piece .28s cubic-bezier(.16,1,.3,1) .31s forwards}
+.brand-preloader__gleam{
+  stroke:var(--intro-ochre);stroke-dasharray:.16 1;stroke-dashoffset:1.16;
+  animation:intro-gleam .52s cubic-bezier(.4,0,.2,1) .07s both;
+}
+.brand-preloader__motto{
+  display:flex;gap:clamp(14px,2.4vw,30px);margin:0;font:400 clamp(12px,1.1vw,14px)/1.4 GolosText,Arial,sans-serif;
+  letter-spacing:.015em;
+}
+.brand-preloader__motto span{opacity:0;transform:translateY(8px);animation:intro-piece .3s ease calc(190ms + var(--word,0)*65ms) forwards}
+.brand-preloader__motto span:nth-child(2){color:var(--intro-ochre)}
+.brand-preloader.is-leaving{pointer-events:none}
+.brand-preloader.is-leaving::before{transform:translateX(-101%)}
+.brand-preloader.is-leaving::after{transform:translateX(101%)}
+.brand-preloader.is-leaving .brand-preloader__center{opacity:0;transform:translateY(-16px) scale(1.035)}
+.brand-preloader.is-leaving .brand-preloader__top,.brand-preloader.is-leaving .brand-preloader__bottom{opacity:0;transform:translateY(-6px)}
+.brand-preloader.is-leaving .brand-preloader__orbit{opacity:0}
+html.is-returning .brand-preloader__roof,html.is-returning .brand-preloader__body{animation:none;stroke-dashoffset:0}
+html.is-returning .brand-preloader__pillar,html.is-returning .brand-preloader__head,html.is-returning .brand-preloader__digit,
+html.is-returning .brand-preloader__wordmark,html.is-returning .brand-preloader__motto span{animation:none;opacity:1;transform:none}
+html.is-returning .brand-preloader__gleam{display:none}
+@keyframes intro-draw{to{stroke-dashoffset:0}}
+@keyframes intro-piece{to{opacity:1;transform:translateY(0)}}
+@keyframes intro-head{to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes intro-gleam{0%{stroke-dashoffset:1.16;opacity:0}12%{opacity:1}88%{opacity:1}100%{stroke-dashoffset:-.16;opacity:0}}
+@keyframes brand-intro-deadline{to{opacity:0;visibility:hidden;pointer-events:none}}
+@media(max-width:599px){
+  .brand-preloader__mark{width:166px}
+  .brand-preloader__top,.brand-preloader__bottom{font-size:9px;letter-spacing:.09em}
+  .brand-preloader__top span:last-child{max-width:12ch;text-align:right}
+  .brand-preloader__bottom>span:last-child{display:none}
+  .brand-preloader__motto{gap:15px;font-size:12px}
+}
+@media(prefers-reduced-motion:reduce){
+  .brand-preloader{animation:brand-intro-deadline 0s 2.4s forwards!important}
+  .brand-preloader::before,.brand-preloader::after{transition:none}
+  .brand-preloader__center,.brand-preloader__top,.brand-preloader__bottom{transition:none}
+  .brand-preloader__roof,.brand-preloader__body{animation:none;stroke-dashoffset:0}
+  .brand-preloader__pillar,.brand-preloader__head,.brand-preloader__digit,.brand-preloader__wordmark,
+  .brand-preloader__motto span{animation:none;opacity:1;transform:none}
+  .brand-preloader__gleam{display:none}
+}

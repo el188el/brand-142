@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="300" viewBox="0 0 600 300" fill="none">
+  <title>Линии общей крыши</title>
+  <g stroke="#1E213D" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 190 318 41 570 168"/>
+    <path d="M22 203 318 54 570 181"/>
+    <path d="M22 216 318 67 570 194"/>
+    <path d="M22 229 318 80 570 207"/>
+    <path d="M22 242 318 93 570 220"/>
+    <path d="M22 255 318 106 570 233"/>
+    <path d="M22 268 318 119 570 246"/>
+  </g>
+  <path d="M22 229 318 80 570 207" stroke="#E3A63D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="123" cy="178" r="20" fill="#813630"/>
+  <circle cx="497" cy="131" r="11" fill="#E3A63D"/>
+</svg>

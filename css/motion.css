@@ -1,0 +1,108 @@
+/* Edition 02: one-shot entrances, layered separately from the existing scroll parallax. */
+.graphic-edition{--enter-ease:cubic-bezier(.16,1,.3,1);--enter-soft:cubic-bezier(.22,.68,0,1)}
+.graphic-edition .reveal{transform:none;translate:0 28px;rotate:0deg;scale:1;transition:opacity .35s ease,translate .55s var(--enter-ease),rotate .55s var(--enter-ease),scale .55s var(--enter-ease),clip-path .55s var(--enter-ease);transition-delay:var(--enter-delay,0ms)}
+.graphic-edition .reveal.is-in,.graphic-edition .reveal:focus-within{opacity:1;translate:0 0;rotate:0deg;scale:1;clip-path:none}
+.graphic-edition .eyebrow.reveal,.graphic-edition p.reveal{translate:0 24px;transition-duration:.4s,.5s}
+.graphic-edition .eyebrow.reveal.is-in,.graphic-edition p.reveal.is-in{translate:0 0}
+
+/* Large words rise out of their own masks, with a small perspective turn. */
+.graphic-edition .kinetic .w{perspective:1000px;isolation:isolate}
+.graphic-edition .kinetic .w>i{transform-origin:15% 100%;transform:translate3d(0,118%,0) rotateX(32deg) rotateZ(2.5deg);opacity:0;transition:transform .55s var(--enter-ease),opacity .35s ease;transition-delay:calc(min(var(--i,0),6)*18ms)}
+.graphic-edition .kinetic.is-in .w>i{transform:translate3d(0,0,0) rotateX(0deg) rotateZ(0deg);opacity:1}
+.graphic-edition .meaning-manifest__line.reveal{translate:0 22px;transition-delay:0ms}
+.graphic-edition .meaning-manifest__line.reveal.is-in{translate:0 0}
+.graphic-edition .meaning-manifest__line small .w>i{transition-duration:.4s,.4s}
+.graphic-edition .meaning-manifest__word .w>i{transition-duration:.55s,.4s}
+
+/* Short entrances keep the full composition readable during a quick scroll. */
+.graphic-edition .mcard.reveal,.graphic-edition .brand-world__item.reveal{translate:0 36px}
+.graphic-edition .mcard.reveal:nth-child(even),.graphic-edition .brand-world__item.reveal:nth-child(even){--enter-delay:40ms}
+.graphic-edition .mcard.reveal .ph,.graphic-edition .brand-world__item.reveal .brand-world__photo{clip-path:polygon(0 28%,100% 8%,100% 100%,0 100%);transition:clip-path .55s var(--enter-ease);transition-delay:var(--enter-delay,0ms)}
+.graphic-edition .mcard.reveal .ph>img,.graphic-edition .brand-world__item.reveal .brand-world__photo>img{scale:1.12;transition:scale .4s var(--enter-ease),transform .5s var(--enter-ease);transition-delay:var(--enter-delay,0ms)}
+.graphic-edition .mcard.reveal.is-in,.graphic-edition .brand-world__item.reveal.is-in{translate:0 0}
+.graphic-edition .mcard.is-in .ph,.graphic-edition .brand-world__item.is-in .brand-world__photo,.graphic-edition .mcard:focus-within .ph,.graphic-edition .brand-world__item:focus-within .brand-world__photo{clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}
+.graphic-edition .mcard.is-in .ph>img,.graphic-edition .brand-world__item.is-in .brand-world__photo>img,.graphic-edition .mcard:focus-within .ph>img,.graphic-edition .brand-world__item:focus-within .brand-world__photo>img{scale:1}
+.graphic-edition .mcard.reveal figcaption,.graphic-edition .brand-world__item.reveal figcaption{opacity:0;translate:0 16px;transition:opacity .4s ease,translate .5s var(--enter-ease);transition-delay:calc(200ms + var(--enter-delay,0ms))}
+.graphic-edition .mcard.is-in figcaption,.graphic-edition .brand-world__item.is-in figcaption,.graphic-edition .mcard:focus-within figcaption,.graphic-edition .brand-world__item:focus-within figcaption{opacity:1;translate:0 0}
+
+/* Merch moves as a single frame: the photo and its accurately placed pins stay together. */
+.graphic-edition .shots .shot.reveal{translate:0 32px}
+.graphic-edition .shots .shot.reveal:nth-child(even){--enter-delay:40ms}
+.graphic-edition .shots .shot.reveal .shot__visual{clip-path:inset(22% 0 0 0 round 20px);transition:clip-path .55s var(--enter-ease);transition-delay:var(--enter-delay,0ms)}
+.graphic-edition .shots .shot.is-in,.graphic-edition .shots .shot:focus-within{translate:0 0}
+.graphic-edition .shots .shot.is-in .shot__visual,.graphic-edition .shots .shot:focus-within .shot__visual{clip-path:inset(0 0 0 0 round 20px)}
+.graphic-edition .shots .shot.reveal>figcaption{opacity:0;translate:0 18px;transition:opacity .4s ease,translate .5s var(--enter-ease);transition-delay:220ms}
+.graphic-edition .shots .shot.is-in>figcaption,.graphic-edition .shots .shot:focus-within>figcaption{opacity:1;translate:0 0}
+
+/* Staggered ribbons and type posters have a quiet sense of depth. */
+.graphic-edition .life__card.reveal{translate:-12px 28px;rotate:-1.3deg;scale:.97;clip-path:inset(0 9% 0 0 round 24px);transform-origin:12% 85%}
+.graphic-edition .life__card.reveal:nth-child(even){translate:12px 28px;rotate:1.3deg;clip-path:inset(0 0 0 9% round 24px)}
+.graphic-edition .life__card.reveal.is-in{translate:0 0;rotate:0deg;scale:1;clip-path:inset(0 0 0 0 round 24px)}
+/* SVG artwork is already loaded inline: show lines together with their dots. */
+.graphic-edition .life__art path[pathLength]{stroke-dasharray:none;stroke-dashoffset:0;transition:none}
+.graphic-edition .type-poster.reveal{translate:0 32px;rotate:1.6deg;scale:.96;transform-origin:50% 90%}
+.graphic-edition .type-poster.reveal:nth-child(even){rotate:-1.6deg;--enter-delay:40ms}
+.graphic-edition .type-poster.reveal.is-in{translate:0 0;rotate:0deg;scale:1}
+.graphic-edition .type-poster__glyph{translate:0 20px;scale:.92;opacity:0;transition:translate .55s var(--enter-ease),scale .35s var(--enter-ease),opacity .4s ease;transition-delay:180ms}
+.graphic-edition .type-poster.is-in .type-poster__glyph{translate:0 0;scale:1;opacity:1}
+.graphic-edition .pillars--editorial .pillar.reveal{translate:0 28px}
+.graphic-edition .pillars--editorial .pillar.reveal.is-in{translate:0 0}
+.graphic-edition .pillars--editorial .pillar__number{scale:.82;translate:0 34px;opacity:0;transition:transform .5s var(--enter-ease),scale .55s var(--enter-ease),translate .55s var(--enter-ease),opacity .4s ease}
+.graphic-edition .pillars--editorial .pillar.is-in .pillar__number{scale:1;translate:0 0;opacity:1}
+.graphic-edition .pillars--editorial .pillar:nth-child(2){--enter-delay:90ms}
+.graphic-edition .pillars--editorial .pillar:nth-child(3){--enter-delay:60ms}
+
+/* Colour fields rise and open; their labels stay attached to the composition. */
+.graphic-edition .colour-field.reveal{translate:0 36px;scale:.98 .91;transform-origin:50% 100%;clip-path:inset(18% 0 0 round 12px)}
+.graphic-edition .colour-field.reveal.is-in{translate:0 0;scale:1;clip-path:inset(0 round 12px)}
+.graphic-edition .colour-field:nth-child(2n){--enter-delay:90ms}
+.graphic-edition .colour-field:nth-child(3n){--enter-delay:60ms}
+.graphic-edition .colour-interior.reveal .colour-interior__swatch{scale:1 .6;transform-origin:50% 100%;transition:scale .55s var(--enter-ease),transform .4s var(--enter-ease)}
+.graphic-edition .colour-interior.is-in .colour-interior__swatch{scale:1}
+.graphic-edition .colour-interior:nth-child(2n){--enter-delay:75ms}
+.graphic-edition .colour-interior:nth-child(3n){--enter-delay:60ms}
+.graphic-edition .colour-facade.reveal{translate:-24px 54px;clip-path:inset(0 28% 0 0)}
+.graphic-edition .colour-facade.reveal.is-in{translate:0 0;clip-path:inset(0)}
+
+/* Complete graphic scenes remain visible throughout the scroll interaction. */
+.graphic-edition .graphic-panel.reveal{opacity:1;translate:0 0;rotate:0deg;scale:1;clip-path:none}
+.graphic-edition .graphic-panel .graphic-panel__frame{clip-path:none}
+.graphic-edition .graphic-panel [data-roof-level],.graphic-edition .graphic-panel .route-line,.graphic-edition .graphic-panel .facade-grid{stroke-dasharray:none;stroke-dashoffset:0;transition:none}
+.graphic-edition .graphic-panel .route-head{opacity:1;scale:1;transform-box:fill-box;transform-origin:center}
+.graphic-edition .graphic-panel--facade .facade-bordo{scale:1 .05;transform-box:fill-box;transform-origin:50% 100%;transition:scale .55s var(--enter-ease)}
+.graphic-edition .graphic-panel--facade .facade-paper{scale:.08 1;transform-box:fill-box;transform-origin:center;transition:scale .55s var(--enter-ease);transition-delay:120ms}
+.graphic-edition .graphic-panel--facade.is-in .facade-bordo,.graphic-edition .graphic-panel--facade.is-in .facade-paper{scale:1}
+.graphic-edition .brand-world__item--signal.reveal .brand-world__signal{clip-path:inset(14% 0 0 0 round 20px);transition:clip-path .55s var(--enter-ease)}
+.graphic-edition .brand-world__item--signal.is-in .brand-world__signal{clip-path:inset(0 0 0 0 round 20px)}
+
+@media(max-width:599px){
+ .graphic-edition .reveal{translate:0 22px}
+ .graphic-edition .mcard.reveal,.graphic-edition .brand-world__item.reveal,.graphic-edition .shots .shot.reveal{translate:0 28px}
+ .graphic-edition .life__card.reveal{translate:-8px 24px;rotate:-.8deg}
+ .graphic-edition .life__card.reveal:nth-child(even){translate:8px 24px;rotate:.8deg}
+ .graphic-edition .reveal.is-in,.graphic-edition .reveal:focus-within{translate:0 0;rotate:0deg;scale:1}
+ .graphic-edition .graphic-panel.reveal{translate:0 0}
+ .graphic-edition .kinetic .w>i{transition-delay:calc(min(var(--i,0),6)*14ms)}
+}
+@media(prefers-reduced-motion:reduce){
+ .graphic-edition .reveal,.graphic-edition .kinetic .w>i,.graphic-edition .type-poster__glyph,.graphic-edition .pillars--editorial .pillar__number{opacity:1!important;translate:none!important;rotate:none!important;scale:1!important;clip-path:none!important;transition:none!important}
+ .graphic-edition .mcard .ph,.graphic-edition .shot .shot__visual,.graphic-edition .brand-world__photo,.graphic-edition .brand-world__signal,.graphic-edition .graphic-panel__frame{clip-path:none!important;transition:none!important}
+ .graphic-edition .mcard .ph>img,.graphic-edition .brand-world__photo>img,.graphic-edition .colour-interior__swatch,.graphic-edition .graphic-panel .route-head,.graphic-edition .graphic-panel--facade rect{scale:1!important;opacity:1!important;transition:none!important}
+ .graphic-edition .graphic-panel path,.graphic-edition .life__art path{stroke-dasharray:none!important;stroke-dashoffset:0!important;transition:none!important}
+ .graphic-edition .reveal figcaption{opacity:1!important;translate:none!important;transition:none!important}
+}
+html.no-js .graphic-edition .reveal,
+html.no-js .graphic-edition .reveal figcaption,
+html.no-js .graphic-edition .mcard .ph,
+html.no-js .graphic-edition .mcard .ph>img,
+html.no-js .graphic-edition .shot__visual,
+html.no-js .graphic-edition .brand-world__photo,
+html.no-js .graphic-edition .brand-world__photo>img,
+html.no-js .graphic-edition .brand-world__signal,
+html.no-js .graphic-edition .type-poster__glyph,
+html.no-js .graphic-edition .pillars--editorial .pillar__number,
+html.no-js .graphic-edition .colour-interior__swatch,
+html.no-js .graphic-edition .graphic-panel__frame,
+html.no-js .graphic-edition .graphic-panel .route-head,
+html.no-js .graphic-edition .graphic-panel--facade rect{opacity:1!important;translate:none!important;rotate:none!important;scale:1!important;clip-path:none!important;transition:none!important}
+html.no-js .graphic-edition .graphic-panel path,html.no-js .graphic-edition .life__art path{stroke-dasharray:none!important;stroke-dashoffset:0!important}

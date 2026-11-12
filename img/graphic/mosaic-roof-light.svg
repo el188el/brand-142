@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <g stroke="#1E213D" stroke-opacity=".13" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M30 179 200 93 370 179"/>
+    <path d="M30 202 200 116 370 202"/>
+    <path d="M30 225 200 139 370 225"/>
+    <path d="M30 248 200 162 370 248"/>
+    <path d="M30 271 200 185 370 271"/>
+  </g>
+  <path d="M102 257 200 208 298 257" stroke="#E3A63D" stroke-opacity=".45" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

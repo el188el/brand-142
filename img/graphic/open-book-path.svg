@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" fill="none">
+  <title>Раскрытая книга и свободная траектория</title>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="M79 114C171 99 244 131 310 201C388 130 476 98 565 108L552 203C461 193 386 221 310 282C242 226 170 202 94 216L79 114Z" stroke="#1E213D" stroke-opacity=".56" stroke-width="2.4"/>
+    <path d="M87 151C172 138 246 164 310 231C387 162 469 133 560 145" stroke="#1E213D" stroke-opacity=".32" stroke-width="1.8"/>
+    <path d="M91 184C177 173 248 197 310 258C383 194 465 167 556 178" stroke="#1E213D" stroke-opacity=".22" stroke-width="1.8"/>
+    <path d="M310 201V282" stroke="#E3A63D" stroke-width="2.8"/>
+    <path d="M131 76C189 40 283 42 348 63C411 84 420 119 386 132C356 144 337 127 350 108C365 85 414 80 454 86" stroke="#1E213D" stroke-opacity=".28" stroke-width="1.8"/>
+    <path d="M131 76C154 62 180 54 208 52" stroke="#E3A63D" stroke-width="2.6"/>
+    <path d="M451 78L465 86L451 94" stroke="#1E213D" stroke-opacity=".4" stroke-width="1.8"/>
+    <path d="M485 258L497 246" stroke="#8B3A32" stroke-opacity=".65" stroke-width="2.2"/>
+    <circle cx="116" cy="268" r="6" fill="#8B3A32" fill-opacity=".64"/>
+    <circle cx="503" cy="68" r="8" fill="#E3A63D"/>
+    <circle cx="503" cy="68" r="17" stroke="#E3A63D" stroke-opacity=".22" stroke-width="1.2"/>
+  </g>
+</svg>

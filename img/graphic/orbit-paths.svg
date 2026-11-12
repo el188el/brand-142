@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400" fill="none">
+  <title>Орбиты возможностей</title>
+  <g transform="rotate(-28 200 200)" stroke="#1E213D" stroke-width="2.2">
+    <ellipse cx="200" cy="200" rx="176" ry="63"/>
+    <ellipse cx="200" cy="200" rx="154" ry="51"/>
+    <ellipse cx="200" cy="200" rx="132" ry="39"/>
+    <ellipse cx="200" cy="200" rx="110" ry="27"/>
+    <path d="M24 200C24 165.206 102.798 137 200 137C297.202 137 376 165.206 376 200" stroke="#E3A63D" stroke-width="3.5"/>
+  </g>
+  <circle cx="200" cy="200" r="37" fill="#813630"/>
+  <circle cx="329" cy="104" r="14" fill="#E3A63D"/>
+  <circle cx="76" cy="245" r="7" fill="#1E213D"/>
+  <g stroke="#1E213D" stroke-width="2.2" stroke-linecap="round">
+    <path d="M78 85v26M65 98h26"/>
+    <path d="M307 294v18M298 303h18"/>
+  </g>
+</svg>

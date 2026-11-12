@@ -1,0 +1,67 @@
+/* November 9 review: a closer photographic rhythm, with text below headings. */
+.graphic-edition .meaning-manifest{padding-top:clamp(64px,7vw,112px)}
+.graphic-edition .pillars--editorial{padding-top:clamp(40px,5vw,72px);padding-bottom:clamp(40px,5vw,72px)}
+.graphic-edition .mgrid{gap:clamp(20px,2.4vw,36px);padding-top:clamp(32px,4vw,64px);padding-bottom:0;grid-template-columns:repeat(12,minmax(0,1fr))}
+.graphic-edition .mgrid>.mcard{grid-area:auto;grid-column:span 6;width:auto;margin:0;align-self:start;--card-ratio:3/2}
+.graphic-edition .mgrid>.mcard:nth-child(4n+1){grid-column:span 7}
+.graphic-edition .mgrid>.mcard:nth-child(4n+2){grid-column:span 5}
+.graphic-edition .mgrid>.mcard:last-child{grid-column:1/-1;--card-ratio:16/7}
+.graphic-edition .mgrid .mcard .ph{border-radius:16px}
+.graphic-edition .life{padding-top:clamp(56px,7vw,104px);padding-bottom:clamp(32px,4vw,56px)}
+.graphic-edition .life__head{display:block;margin-bottom:32px}
+.graphic-edition .life__head .eyebrow{margin-bottom:22px}
+.graphic-edition .life__lead{margin-top:20px;max-width:54ch}
+.graphic-edition .life__grid{gap:clamp(20px,2.4vw,36px)}
+.graphic-edition .life__card{min-height:270px}
+.graphic-edition .build{height:150vh}
+.graphic-edition .type--editorial{padding-top:clamp(56px,7vw,104px);padding-bottom:clamp(56px,7vw,104px)}
+.graphic-edition .type-editorial__head,.graphic-edition .colour-system__head{display:block;margin-bottom:clamp(32px,4vw,56px)}
+.graphic-edition .type-editorial__head>.eyebrow,.graphic-edition .colour-system__head>.eyebrow{margin-bottom:22px}
+.graphic-edition .type-editorial__lead,.graphic-edition .colour-system__lead{margin-top:24px;max-width:56ch}
+.graphic-edition .palette-sec--editorial{padding-top:clamp(56px,7vw,104px);padding-bottom:clamp(56px,7vw,104px)}
+.graphic-edition .merch{padding-bottom:clamp(56px,7vw,104px)}
+.graphic-edition .merch>.sec-head{display:block;padding-top:clamp(56px,7vw,104px)}
+.graphic-edition .merch__title{margin-top:24px}
+.graphic-edition .merch__hint{margin-top:22px;max-width:55ch}
+.graphic-edition .shots{grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(20px,2.4vw,36px);padding-top:clamp(32px,4vw,56px);align-items:stretch}
+.graphic-edition .shots>.shot{grid-area:auto;grid-column:span 6;margin:0;width:auto;align-self:stretch}
+.graphic-edition .shots .shot .shot__visual,.graphic-edition .shots .shot .ph{height:100%}
+.graphic-edition .shots .shot .ph{aspect-ratio:3/2;min-height:0;border-radius:16px}
+.graphic-edition .shots .shot--b .ph>img{object-position:center 35%}
+.graphic-edition .shots .shot__visual .shot__details{padding:20px;pointer-events:none}
+.graphic-edition .shots .shot__tag{pointer-events:auto}
+.graphic-edition .space--categories{padding:clamp(56px,7vw,104px) 0}
+.graphic-edition .space--categories .space__head{grid-template-columns:minmax(0,1fr) auto;gap:26px 40px;align-items:end}
+.graphic-edition .space--categories .space__main-title{grid-column:1/-1;max-width:23ch;margin:0}
+.graphic-edition .space--categories .space__category-copy{grid-column:1;grid-row:auto;min-height:128px;margin:0;max-width:760px}
+.graphic-edition .space--categories .space__description{max-width:55ch;margin-top:16px}
+.graphic-edition .space--categories .space__hint-wrap{grid-column:2;grid-row:auto;align-self:end;justify-items:end;gap:14px}
+.graphic-edition .space--categories .space__scroller{gap:clamp(18px,2vw,30px);padding-top:32px}
+.graphic-edition .space--categories .space__card{flex-shrink:0}
+.graphic-edition .brand-world__item--kit,.graphic-edition .brand-world__item--campus,.graphic-edition .brand-world__item--guide{position:relative;margin:0}
+.graphic-edition .brand-world__photo{border-radius:16px}
+.graphic-edition .mcard--concept .brand-world__photo{aspect-ratio:3/2}
+.graphic-edition .shot--concept .brand-world__photo{aspect-ratio:3/2;height:100%}
+.graphic-edition .shot--concept .brand-world__photo img{object-position:center}
+.graphic-edition .application-inset{max-width:760px;width:75%;margin:clamp(32px,4vw,56px) auto 0}
+.graphic-edition .mcard>figcaption.concept-label,.graphic-edition .shot>figcaption.concept-label,.graphic-edition .application-inset>figcaption.concept-label{position:absolute;left:16px;bottom:16px;display:block;width:auto;height:auto;clip-path:none;white-space:normal;overflow:visible;margin:0;padding:6px 12px;border-radius:30px;background:var(--paper);color:var(--ink);font:400 11px/1.4 var(--f-text)}
+.graphic-edition .identity-inset{width:min(340px,65%);margin:clamp(32px,4vw,56px) 0 0 auto}
+.graphic-edition .identity-inset .brand-world__signal{aspect-ratio:1}
+.graphic-edition .footer__cta{align-items:start}
+.footer__coming-soon{max-width:42ch;font:400 clamp(16px,1.5vw,22px)/1.65 var(--f-text);opacity:.72;margin:0}
+@media(max-width:899px){
+ .graphic-edition .mgrid>.mcard:nth-child(n){grid-column:span 6;width:auto;margin:0}
+ .graphic-edition .mgrid>.mcard:last-child{grid-column:1/-1}
+ .graphic-edition .space--categories .space__head{grid-template-columns:1fr}
+ .graphic-edition .space--categories .space__category-copy{grid-column:1;min-height:128px}
+ .graphic-edition .space--categories .space__hint-wrap{grid-column:1;display:flex;justify-content:space-between;padding:0}
+}
+@media(max-width:599px){
+ .graphic-edition .mgrid,.graphic-edition .shots{display:grid;grid-template-columns:1fr;gap:20px}
+ .graphic-edition .mgrid>.mcard:nth-child(n),.graphic-edition .shots>.shot{grid-column:1;width:100%;margin:0;--card-ratio:3/2}
+ .graphic-edition .life__card:nth-child(n){margin:0}
+ .graphic-edition .life__card{padding:26px}
+ .graphic-edition .application-inset{width:100%}
+ .graphic-edition .space--categories .space__category-copy{min-height:170px}
+ .graphic-edition .shots .shot__visual .shot__details{padding:14px}
+}

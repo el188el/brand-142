@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="360" viewBox="0 0 500 360" fill="none">
+  <title>Разные пути — общее движение</title>
+  <g stroke="#1E213D" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8 260H88Q154 260 154 194V138"/>
+    <path d="M8 272H94Q166 272 166 200V132"/>
+    <path d="M8 284H100Q178 284 178 206V130"/>
+    <path d="M8 296H106Q190 296 190 212V132"/>
+    <path d="M8 308H112Q202 308 202 218V138"/>
+    <path d="M234 346V98"/>
+    <path d="M246 346V92"/>
+    <path d="M258 346V90"/>
+    <path d="M270 346V92"/>
+    <path d="M282 346V98"/>
+    <path d="M492 278H434Q368 278 368 212V166"/>
+    <path d="M492 290H428Q356 290 356 218V160"/>
+    <path d="M492 302H422Q344 302 344 224V158"/>
+    <path d="M492 314H416Q332 314 332 230V160"/>
+    <path d="M492 326H410Q320 326 320 236V166"/>
+  </g>
+  <path d="M8 284H100Q178 284 178 206V130M258 346V90M492 302H422Q344 302 344 224V158" stroke="#E3A63D" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="178" cy="97" r="20" fill="#813630"/>
+  <circle cx="258" cy="55" r="20" fill="#1E213D"/>
+  <circle cx="344" cy="125" r="20" fill="#813630"/>
+  <circle cx="75" cy="284" r="8" fill="#E3A63D"/>
+  <circle cx="258" cy="248" r="8" fill="#E3A63D"/>
+</svg>

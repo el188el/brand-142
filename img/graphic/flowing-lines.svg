@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="240" viewBox="0 0 600 240" fill="none">
+  <title>Непрерывный ритм</title>
+  <g stroke="#1E213D" stroke-width="2.3" stroke-linecap="round">
+    <path d="M12 38C116 38 119 132 237 132S367 38 472 38H588"/>
+    <path d="M12 56C116 56 119 150 237 150S367 56 472 56H588"/>
+    <path d="M12 74C116 74 119 168 237 168S367 74 472 74H588"/>
+    <path d="M12 92C116 92 119 186 237 186S367 92 472 92H588"/>
+    <path d="M12 110C116 110 119 204 237 204S367 110 472 110H588"/>
+    <path d="M12 128C116 128 119 222 237 222S367 128 472 128H588"/>
+  </g>
+  <path d="M12 74C116 74 119 168 237 168S367 74 472 74H588" stroke="#E3A63D" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="97" cy="100" r="17" fill="#813630"/>
+  <circle cx="481" cy="74" r="12" fill="#E3A63D"/>
+</svg>

@@ -1,0 +1,170 @@
+/* Approved typography. Original font files; no synthetic weights or glyph edits. */
+@font-face{font-family:DelaGothicOne;src:url('../fonts/DelaGothicOne.woff') format('woff');font-weight:400;font-display:swap}
+@font-face{font-family:GolosText;src:url('../fonts/GolosText.woff') format('woff');font-weight:400 900;font-display:swap}
+:root{--f-display:DelaGothicOne,sans-serif;--f-sub:GolosText,sans-serif;--f-text:GolosText,sans-serif;--f-mono:GolosText,sans-serif;font-synthesis:none}
+.hero__title,.statement,.life__title,.type__title,.palette-sec__title,.merch__title,.space__title,.footer__title,.build__title,.corp__title,.nav__logo-text,.ticker__track span,.footer__marquee-track span,.shot__idx,.type__sample--benzin{font-weight:400;letter-spacing:-.01em;line-height:1.12}
+.pillar b,.life__card h4,.shot__title,.lb__cap b,.palette__chip b,.mcard figcaption b,.shot figcaption b{font-family:var(--f-sub);font-weight:500;letter-spacing:0;line-height:1.25}
+.mobile-menu a,.btn{font-family:var(--f-sub);font-weight:500}
+.type__sample--mono{font-family:var(--f-sub);font-weight:500;letter-spacing:0;text-transform:none;line-height:1.25}
+.type__sample--inter{font-family:var(--f-text);font-weight:400}
+.hero__eyebrow,.eyebrow,.nav__links a,.corp__tag{letter-spacing:.10em}
+/* Original asymmetric grids live in style.css; only image colour treatment is overridden. */
+.mgrid .ph img,.shots .ph img,.space__card .ph img{filter:none}
+.space--categories{--space-photo-height:clamp(240px,35vh,400px)}
+.space--categories .space__head{grid-template-columns:minmax(0,1fr) auto;align-items:end}
+.space__category-copy{min-height:clamp(175px,15vw,235px);display:flex;flex-direction:column;justify-content:center}
+.space--categories .space__title{font-size:clamp(30px,4.8vw,70px);max-width:24ch;min-height:2.12em}
+.space__description{font-size:clamp(14px,1.3vw,18px);line-height:1.55;color:var(--light-60);max-width:62ch;margin-top:16px;min-height:3.1em}
+.space--categories .space__card{flex:0 0 auto;width:calc(var(--space-photo-height)*1.5)}
+.space--categories .space__card--portrait{width:calc(var(--space-photo-height)*.667)}
+.space--categories .space__card .ph{height:var(--space-photo-height);min-height:0;aspect-ratio:auto}
+.space--categories .space__card .ph img{object-position:center}
+.space--categories .space__card figcaption b{font-family:var(--f-sub);font-weight:500}
+@media(max-width:899px){.space--categories .space__head{grid-template-columns:1fr}.space--categories .space__hint-wrap{display:flex;align-items:center;justify-content:space-between}.space--categories .space__nav{margin:0}.space__category-copy{min-height:220px}}
+@media(max-width:599px){.hero__title{font-size:clamp(32px,7.6vw,46px)}.space--categories{--space-photo-height:clamp(180px,54vw,260px)}.space--categories .space__title{font-size:clamp(28px,7.2vw,42px)}.space__category-copy{min-height:205px}}
+
+/* Merch: a quiet photo overlay, colour-coded details, no glow. */
+.shots{gap:clamp(32px,4.5vw,64px) clamp(24px,3vw,48px)}
+.shots .ph{position:relative;border:1px solid var(--ink-14)}
+.shots .ph>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.shots .shot:hover .ph>img{transform:none}
+.shot--g .ph>img{object-position:50% 100%}
+.shot__visual{position:relative;isolation:isolate;border-radius:var(--r);overflow:hidden}
+.shot__visual .shot__details{position:absolute;inset:0;z-index:2;margin:0;padding:clamp(16px,1.7vw,24px);min-height:0;border:0;border-radius:inherit;background:none;display:flex;flex-direction:column;justify-content:space-between;gap:16px;pointer-events:none}
+.shot__details::before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,transparent 30%,rgba(0,0,0,.06) 43%,rgba(0,0,0,.70));transition:opacity .32s ease}
+.shot__details::after{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(140deg,rgba(0,0,0,.26),transparent 42%)}
+.shot__details .shot__title,.shot__details .shot__note{transition:opacity .26s ease,transform .34s cubic-bezier(.16,1,.3,1);transform:translateY(0)}
+.shot__details .shot__idx{font:400 clamp(42px,4.1vw,62px)/1 var(--f-display);letter-spacing:-.04em;color:var(--tone);-webkit-text-stroke:1px #fff;text-shadow:none;filter:none;paint-order:stroke fill}
+.shot .shot__details .shot__idx{-webkit-text-stroke:1px #fff;text-shadow:none;filter:none}
+.shot__details .shot__body{display:grid;gap:8px;align-content:end}
+.shot__visual .shot__title{font:400 clamp(16px,1.35vw,21px)/1.15 var(--f-display);letter-spacing:-.01em;text-wrap:balance;color:#fff;max-width:30ch;text-shadow:none}
+.shot__visual .shot__note{font:400 12px/1.45 var(--f-text);color:rgba(255,255,255,.82);max-width:44ch;margin:0}
+.shot__details .shot__tags{margin:5px 0 0;gap:6px;list-style:none}
+.shot__details .shot__tags li{padding:0;border:0;background:none;color:inherit}
+.shot__tag{display:inline-flex;align-items:center;min-height:32px;padding:6px 11px;border:1px solid rgba(255,255,255,.25);border-radius:100px;background:var(--tone);color:var(--ink);font:500 11px/1.2 var(--f-text);letter-spacing:0;text-transform:none;box-shadow:none;pointer-events:auto;position:relative;transition:background .18s,color .18s,border-color .18s}
+.shot[data-tone=navy] .shot__tag,.shot[data-tone=turq] .shot__tag,.shot[data-tone=bordo] .shot__tag{color:#fff}
+.shot .shot__tag:hover,.shot .shot__tag.is-linked{background:var(--paper);color:var(--ink);border-color:#fff;box-shadow:none}
+.shot__tag:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.shot__visual .hotspot{--x:50%;--y:50%;z-index:4}
+.shot .hotspot::before{background:var(--tone);border:1.5px solid #fff;box-shadow:none}
+.hotspot__halo{position:absolute;left:50%;top:50%;translate:-50% -50%;width:var(--halo-w,40px);height:var(--halo-h,40px);border:1.5px solid var(--tone);border-radius:6px;background:color-mix(in srgb,var(--tone) 10%,transparent);box-shadow:none;opacity:0;pointer-events:none;transition:opacity .18s}
+.hotspot.is-linked .hotspot__halo,.hotspot.is-active .hotspot__halo{opacity:1}
+.shot .hotspot.is-linked::before,.shot .hotspot.is-active::before{background:var(--tone);border-color:#fff;transform:scale(1.25)}
+.hotspot .hotspot__tip{left:var(--tip-left,50%);translate:none;width:180px;max-width:calc(100vw - 64px);text-align:center;white-space:normal}
+.hotspot.is-linked .hotspot__tip{opacity:1;transform:none}
+/* On inspection the photograph, labels and pins remain; only title and description disappear. */
+
+
+.shot__visual.is-inspecting .shot__title,.shot__visual.is-inspecting .shot__note{opacity:0;transform:translateY(6px)}
+.shot__visual.is-inspecting .shot__details::before{opacity:.22}
+/* The visible overlay supplies the heading; keep figcaption for accessible names and the viewer. */
+.shots .shot>figcaption{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+@media(prefers-reduced-motion:reduce){.shot__details::before,.shot__details .shot__title,.shot__details .shot__note{transition:none;transform:none}}
+@media(max-width:599px){.hero__title{font-size:clamp(30px,7.2vw,44px)}.shot__visual .shot__details{padding:14px;gap:8px}.shot__details .shot__idx{font-size:38px}.shot__visual .shot__title{font-size:17px}.shot__visual .shot__note{font-size:11px}.shot__tag{min-height:36px;padding:6px 9px;font-size:10px}.shot__details .shot__body{gap:6px}.shot--a .shot__note,.shot--g .shot__note{display:none}.shot--a .shot__title,.shot--g .shot__title{font-size:15px}.shot--a .shot__tag,.shot--g .shot__tag{min-height:32px;font-size:9px;padding:5px 8px}.shot--a .shot__details,.shot--g .shot__details{padding:12px;gap:6px}}
+
+body:has(.shot__visual:hover) .cursor.is-big{width:30px;height:30px;background:rgba(242,243,247,.94);border:1px solid var(--ink-14);box-shadow:none}
+
+/* Photo-aware heading placement and captions below the frame. */
+.shots .shot>figcaption{position:static;width:auto;height:auto;clip-path:none;white-space:normal;overflow:visible;margin:0;padding:14px 2px 0;display:block}
+.shot__caption-label{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.shot__description{font:400 13px/1.6 var(--f-text);color:var(--ink-60);max-width:48ch;margin:0}
+.shot .shot__details .shot__head{opacity:1;transform:none;transition:none}
+.shot .shot__details .shot__idx{-webkit-text-stroke:1px #fff;text-shadow:none;filter:none}
+.shot .shot__visual .hotspot__tip{display:block}
+.shots .shot .shot__visual .shot__title{position:absolute;left:clamp(94px,8.5vw,124px);right:24px;top:24px;max-width:none;font-size:clamp(20px,1.8vw,30px);line-height:1.12;text-transform:uppercase;text-align:right}
+.shot[data-copy-position=top] .shot__details::after{background:linear-gradient(180deg,rgba(0,0,0,.35),transparent 45%)}
+.shot[data-copy-position=top] .shot__details::before{background:linear-gradient(180deg,transparent 65%,rgba(0,0,0,.25))}
+@media(min-width:900px){.shots{row-gap:clamp(60px,7.5vw,108px)}.shot--b{margin-top:clamp(60px,7vw,100px)}.shot--c{margin-top:42px}.shot--e{margin-top:72px}.shot--f{margin-top:24px}.shot--g{margin-top:clamp(65px,8vw,115px)}}
+@media(max-width:899px){.shots{row-gap:52px}.shot{margin-top:0}.shots .shot .shot__visual .shot__title{left:90px;right:18px;top:20px}}
+@media(max-width:599px){.shots .shot .shot__visual .shot__title{left:82px;right:16px;top:18px;font-size:clamp(16px,4.5vw,20px)}.shot__description{font-size:12px}.shot__visual .shot__details .shot__head{opacity:1}}
+
+/* Anchor the heading to the full photo overlay, not its bottom content row. */
+.shot .shot__details .shot__body{position:static}
+.shot .shot__visual .hotspot__tip{display:block;z-index:6}
+.shot__visual .hotspot.is-linked,.shot__visual .hotspot.is-active{z-index:6}
+
+/* Align the visible number and heading within one header row. */
+.shots .shot .shot__details .shot__head{display:flex;align-items:center;justify-content:space-between;width:100%;gap:20px}
+.shots .shot .shot__details .shot__head .shot__idx{flex:0 0 auto}
+.shots .shot .shot__visual .shot__head .shot__title{position:static;inset:auto;flex:1;align-self:center;margin:0;max-width:none;text-align:right;min-width:0}
+.hotspot__connections{position:absolute;inset:0;width:100%;height:100%;z-index:3;overflow:hidden;pointer-events:none;opacity:0;transition:opacity .2s}
+.hotspot__connections.is-linked{opacity:1}
+.hotspot__connections path{fill:none;stroke:var(--tone);stroke-width:1.5;stroke-dasharray:5 5;vector-effect:non-scaling-stroke}
+.hotspot__connections rect{fill:color-mix(in srgb,var(--tone) 12%,transparent);stroke:var(--tone);stroke-width:1.5;vector-effect:non-scaling-stroke}
+.hotspot[data-targets] .hotspot__halo{display:none}
+@media(max-width:599px){.shots .shot .shot__details .shot__head{gap:14px}}
+
+/* One contour/connection treatment for every labelled product. */
+.shot .hotspot__halo{display:none}
+.hotspot__spotlight{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none;opacity:0;transition:opacity .24s ease}
+.hotspot__spotlight.is-linked{opacity:1}
+.hotspot__spotlight .spotlight-base{fill:#fff;stroke:none}
+.hotspot__spotlight .spotlight-cutout{fill:#000;stroke:none}
+.hotspot__spotlight .spotlight-dim{fill:#000;fill-opacity:.28;stroke:none}
+.hotspot__connections .connection-line{fill:none;stroke:var(--tone);stroke-width:1.4;stroke-dasharray:4 5;vector-effect:non-scaling-stroke}
+.hotspot__connections .object-contour{fill:none;stroke:var(--tone);stroke-width:1.5;stroke-dasharray:none;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.shot__visual.is-inspecting .shot__details::before,.shot__visual.is-inspecting .shot__details::after{opacity:0}
+@media(prefers-reduced-motion:reduce){.hotspot__spotlight,.hotspot__connections{transition:none}}
+
+/* Selection choreography: dim, draw the connection, trace the object. */
+.hotspot__spotlight .spotlight-dim{fill-opacity:.40}
+.hotspot__spotlight{transition:opacity .35s cubic-bezier(.16,1,.3,1)}
+.hotspot__connections .connection-line{stroke-width:2.2;stroke-dasharray:5 6}
+.hotspot__connections .object-contour{stroke-width:2.1;stroke-dasharray:1;stroke-dashoffset:1}
+.hotspot__connections .connection-reveal{fill:none;stroke:#fff;stroke-width:10;stroke-dasharray:1;stroke-dashoffset:1;vector-effect:non-scaling-stroke;stroke-linecap:round}
+.hotspot__connections.is-linked .connection-reveal{animation:merch-draw-link .55s cubic-bezier(.25,.8,.25,1) both;animation-delay:calc(var(--target-order,0)*70ms)}
+.hotspot__connections.is-linked .connection-line{animation:merch-line-flow 1.5s linear infinite}
+.hotspot__connections.is-linked .object-contour{animation:merch-trace-object .7s cubic-bezier(.16,1,.3,1) both;animation-delay:calc(220ms + var(--target-order,0)*70ms)}
+.shot .hotspot.is-linked::before{animation:merch-pin-arrive .5s cubic-bezier(.16,1,.3,1) both}
+@keyframes merch-draw-link{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes merch-trace-object{0%{stroke-dashoffset:1;opacity:0}12%{opacity:1}100%{stroke-dashoffset:0;opacity:1}}
+@keyframes merch-line-flow{from{stroke-dashoffset:22}to{stroke-dashoffset:0}}
+@keyframes merch-pin-arrive{0%{transform:scale(.8)}45%{transform:scale(1.6)}100%{transform:scale(1.2)}}
+@media(prefers-reduced-motion:reduce){.hotspot__connections.is-linked .connection-reveal,.hotspot__connections.is-linked .object-contour{animation:none;stroke-dashoffset:0;opacity:1}.hotspot__connections.is-linked .connection-line,.shot .hotspot.is-linked::before{animation:none}.hotspot__spotlight{transition:none}}
+
+/* A single bright interior accent keeps annotations legible across the photographs. */
+.shots .shot{--tone:#F2C244}
+.shots .shot .shot__tag{background:#F2C244;color:#1E213D;border-color:rgba(30,33,61,.2)}
+.shots .shot .shot__tag:hover,.shots .shot .shot__tag.is-linked{background:#fff;color:#1E213D;border-color:#F2C244}
+.shots .shot .hotspot__tip{background:#F2C244;color:#1E213D;border:1px solid rgba(30,33,61,.16)}
+.shots .shot .hotspot::before{background:#F2C244;border-color:#fff}
+.shots .shot .shot__idx{color:#F2C244}
+
+/* Clean contour edges; the masked photograph remains the highlight. */
+.hotspot__connections .object-contour{stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;fill:none;filter:none}
+.hotspot__connections .connection-line{stroke-linecap:round;stroke-linejoin:round}
+
+/* Objects themselves are hover targets; direction follows the source of interaction. */
+.hotspot__connections .object-contour{pointer-events:fill;cursor:pointer}
+.shots .shot .hotspot .hotspot__tip{display:none}
+.hotspot__connections[data-direction=to-label].is-linked .object-contour{animation-delay:calc(var(--target-order,0)*50ms)}
+.hotspot__connections[data-direction=to-label].is-linked .connection-reveal{animation-delay:calc(180ms + var(--target-order,0)*70ms)}
+
+/* Explicit sequential phases are controlled by merch.js, with no overlapping CSS loops. */
+.shots .hotspot__connections.is-linked .connection-reveal,
+.shots .hotspot__connections.is-linked .object-contour,
+.shots .hotspot__connections.is-linked .connection-line{animation:none}
+.shots .hotspot__connections .connection-line{stroke-dashoffset:0}
+.hotspot__spotlight .spotlight-dim{fill-opacity:.53}
+.shot[data-copy-position=top] .shot__details::after{background:linear-gradient(180deg,rgba(0,0,0,.60),rgba(0,0,0,.28) 24%,transparent 56%)}
+
+.hotspot__connections .connection-line{stroke-width:2.8}
+
+/* Environment: permanent display heading, animated category below, larger photographs. */
+.space--categories{--space-photo-height:clamp(380px,56vh,560px)}
+.space--categories .space__head{gap:24px 36px;grid-template-columns:minmax(0,1fr) auto}
+.space--categories .space__main-title{grid-column:1/-1;font:400 clamp(32px,5.4vw,82px)/1.08 var(--f-display);letter-spacing:-.025em;max-width:23ch;min-height:0;margin:0 0 20px}
+.space--categories .space__category-copy{position:relative;min-height:128px;display:block;max-width:850px}
+.space__category-clip{overflow:hidden;padding-bottom:3px}
+.space__category-title{font:500 clamp(24px,2.6vw,38px)/1.17 var(--f-sub);letter-spacing:-.015em;margin:0;max-width:32ch}
+.space--categories .space__description{font:400 clamp(14px,1.2vw,17px)/1.55 var(--f-text);max-width:58ch;min-height:0;margin:12px 0 0}
+.space--categories .space__category-ghost{position:absolute;inset:0;pointer-events:none}
+.space--categories .space__hint{max-width:33ch;line-height:1.65}
+.space--categories .space__hint-wrap{padding-bottom:12px}
+.space--categories .space__card{width:calc(var(--space-photo-height)*1.4)}
+.space--categories .space__card--portrait{width:calc(var(--space-photo-height)*.833333)}
+.space--categories .space__card .ph{height:var(--space-photo-height)}
+.space--categories .space__card .ph>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.space--categories .space__card figcaption{padding-top:14px;font-size:15px}
+@media(max-width:899px){.space--categories .space__head{grid-template-columns:1fr;gap:20px}.space--categories .space__category-copy{min-height:126px}.space--categories .space__hint-wrap{padding:0;justify-content:space-between}.space--categories .space__main-title{margin-bottom:12px}.space--categories .space__hint{max-width:29ch}}
+@media(max-width:599px){.space--categories{--space-photo-height:clamp(330px,88vw,440px)}.space--categories .space__main-title{font-size:clamp(30px,7.5vw,44px);line-height:1.12;max-width:21ch}.space__category-title{font-size:25px}.space--categories .space__category-copy{min-height:136px}.space--categories .space__card{width:calc(var(--space-photo-height)*1.3)}.space--categories .space__card--portrait{width:calc(var(--space-photo-height)*.833333)}.space--categories .space__hint{font-size:10px}}

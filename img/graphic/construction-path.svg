@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="360" viewBox="0 0 600 360" fill="none">
+  <title>От замысла к форме</title>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="M105 141A190 190 0 0 1 434 270" stroke="#1E213D" stroke-opacity=".23" stroke-width="1.7"/>
+    <path d="M399 160A190 190 0 0 1 434 270" stroke="#E3A63D" stroke-width="2.5"/>
+    <path d="M300 83L244 270M300 83L434 270" stroke="#1E213D" stroke-opacity=".55" stroke-width="2.4"/>
+    <path d="M275 169H361" stroke="#1E213D" stroke-opacity=".3" stroke-width="1.8"/>
+    <path d="M286 166V172M350 166V172" stroke="#1E213D" stroke-opacity=".38" stroke-width="1.8"/>
+    <path d="M302 62L302 77" stroke="#1E213D" stroke-opacity=".5" stroke-width="2.4"/>
+    <circle cx="300" cy="83" r="10" fill="#F2F3F7" stroke="#1E213D" stroke-opacity=".55" stroke-width="2"/>
+    <circle cx="300" cy="83" r="4" fill="#E3A63D"/>
+    <path d="M423 253L434 270" stroke="#8B3A32" stroke-opacity=".8" stroke-width="3"/>
+    <path d="M155 288H480" stroke="#1E213D" stroke-opacity=".17" stroke-width="1.4"/>
+    <path d="M244 282V294M434 282V294" stroke="#1E213D" stroke-opacity=".26" stroke-width="1.4"/>
+    <circle cx="129" cy="216" r="4.5" fill="#8B3A32" fill-opacity=".6"/>
+    <path d="M476 118H490M483 111V125" stroke="#1E213D" stroke-opacity=".3" stroke-width="1.6"/>
+  </g>
+</svg>

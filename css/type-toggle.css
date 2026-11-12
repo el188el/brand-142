@@ -1,0 +1,32 @@
+/* Keep the arrow's generous hit area while preserving the printed specimen. */
+.type-poster--medium,.type-poster--display,.type-poster--reading{transition:background-color .25s ease,color .25s ease,border-color .25s ease}
+.graphic-edition .type-poster.reveal{transition:background-color .25s ease,color .25s ease,border-color .25s ease,opacity .35s ease,translate .55s var(--enter-ease),rotate .55s var(--enter-ease),scale .55s var(--enter-ease)}
+.type-poster--medium.is-dark{background:var(--graphite);color:var(--paper)}
+.type-poster--display.is-light{background:var(--paper);color:var(--navy);box-shadow:inset 0 0 0 1px var(--ink-14)}
+.type-poster--display.is-light>.type-poster__alphabet{border-color:var(--ink-14)}
+.type-poster--reading.is-dark{background:var(--bordo);color:var(--paper)}
+.graphic-edition .type-poster--reading{border-color:transparent;box-shadow:inset 0 0 0 1px var(--ink-14)}
+.graphic-edition .type-poster--reading.is-dark{border-color:transparent;box-shadow:none}
+.graphic-edition .type-poster--medium,.graphic-edition .type-poster--medium.is-dark{border:0;box-shadow:none}
+.type-poster--reading.is-dark>.type-poster__note{color:rgba(242,243,247,.7)}
+.type-poster__alphabet-row{display:grid;grid-template-columns:repeat(11,minmax(0,1fr));width:min(100%,330px);letter-spacing:0}
+.type-poster__alphabet-row>span{display:block;text-align:left}
+.type-poster__alphabet-digits{display:block;margin-top:10px}
+.type-poster--medium .type-poster__toggle{display:block;position:relative;z-index:6;left:0;width:72%;min-height:54px;padding:8px 0;background:transparent;border:0;border-radius:6px;outline:none;color:inherit;cursor:pointer;transition:color .16s cubic-bezier(.4,0,.2,1)}
+.type-poster--medium .type-poster__toggle svg{display:block;width:100%;height:54px;margin:0;pointer-events:none;transform:rotate(0deg);transition:transform .16s cubic-bezier(.4,0,.2,1)}
+.type-poster--medium.is-dark>.type-poster__toggle{left:0;color:var(--ochre)}
+.type-poster--medium.is-dark>.type-poster__toggle svg{transform:rotate(180deg)}
+.type-poster--medium .type-poster__toggle:focus,.type-poster--medium .type-poster__toggle:focus-visible{outline:none}
+@media(hover:hover){.type-poster--medium .type-poster__toggle:hover{background:transparent}}
+.graphic-edition .type-editorial__grid{overflow:visible;overflow-anchor:none}
+.graphic-edition .type-editorial__grid>.type-poster--display{translate:none!important;rotate:none!important;scale:1!important;transform:none!important;transition:none!important;overflow-anchor:none}
+.graphic-edition .type-editorial__grid>.type-poster--display .type-poster__glyph{opacity:1;translate:none!important;scale:1!important;transform:none!important;transition:none!important}
+@media(min-width:700px){.graphic-edition .type-editorial__grid>.type-poster--display{position:sticky;top:calc(var(--type-header-height,68px) + 18px);align-self:start;margin-bottom:0;z-index:1}}
+@media(max-width:699px){.graphic-edition .type-editorial__grid>.type-poster--display{position:relative;top:auto}}
+html.no-js .type-poster__toggle{visibility:hidden}
+@media(prefers-reduced-motion:reduce){.type-poster--medium,.type-poster--display,.type-poster--reading,.type-poster--medium .type-poster__toggle,.type-poster--medium .type-poster__toggle svg{transition:none}}
+/* Old colours remain on a clipped overlay while the new palette travels across the grid. */
+.graphic-edition .type-poster.is-colour-wiping{transition:none;box-shadow:none}
+.graphic-edition .type-poster.type-poster__colour-overlay{position:absolute;inset:0;width:100%;height:100%;max-width:none;min-width:0;margin:0;box-sizing:border-box;grid-area:auto;z-index:5;pointer-events:none;transition:none!important;translate:0!important;rotate:0deg!important;scale:1!important;transform:none!important;animation:none!important}
+.graphic-edition .type-poster__colour-overlay *{pointer-events:none!important;transition:none!important;animation:none!important}
+.graphic-edition .type-poster__colour-overlay .type-poster__toggle{visibility:hidden!important}
