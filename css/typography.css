@@ -10,12 +10,25 @@
   hyphens: none;
   word-break: normal;
 }
-.meaning-manifest__line:last-child {
+.meaning-manifest__line:nth-child(2) { margin-left: 8%; }
+.meaning-manifest__line:nth-child(3) {
   display: flex;
   align-items: baseline;
-  gap: clamp(8px, 1.2vw, 20px);
+  margin-left: 16%;
+  gap: 0;
 }
-.meaning-manifest__line:last-child small { margin-bottom: 0; }
+.meaning-manifest__line:nth-child(3) small {
+  flex: 0 0 0;
+  width: 0;
+  position: relative;
+  left: -1.8em;
+  white-space: nowrap;
+  margin-bottom: 0;
+}
+@media (max-width: 599px) {
+  .meaning-manifest__line:nth-child(2) { margin-left: 4%; }
+  .meaning-manifest__line:nth-child(3) { margin-left: 8%; }
+}
 @media (max-width: 399px) {
   .graphic-edition .merch__title { font-size: 28px; }
   .graphic-edition .type-poster__glyph { font-size: 130px; }
