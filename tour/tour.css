@@ -3,8 +3,6 @@
 html, body { margin: 0; height: 100%; background: #1e213d; color: #f2f3f7; font-family: Golos, sans-serif; }
 body { display: flex; flex-direction: column; height: 100dvh; }
 .tour-bar {
-  position: relative;
-  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -16,7 +14,7 @@ body { display: flex; flex-direction: column; height: 100dvh; }
 .tour-bar a:focus-visible { outline: 2px solid #f2c244; outline-offset: 4px; }
 .tour-bar h1 { margin: 0; font-size: 16px; font-weight: 500; }
 .tour-bar h1 span { color: #b6bdce; }
-#container { position: relative; z-index: 0; isolation: isolate; flex: 1 1 auto; min-height: 0; width: 100%; overflow: hidden; background: #1e213d; }
+#container { position: relative; flex: 1 1 auto; min-height: 0; width: 100%; overflow: hidden; background: #1e213d; }
 .tour-status { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 12px; padding: 24px; text-align: center; }
 .tour-status p { margin: 0; max-width: 42ch; line-height: 1.6; }
 .tour-status p:first-child { font-size: 24px; }
@@ -24,27 +22,7 @@ body { display: flex; flex-direction: column; height: 100dvh; }
 .tour-status button { margin-top: 12px; border: 0; border-radius: 32px; padding: 14px 22px; background: #f2c244; color: #1e213d; font: inherit; cursor: pointer; }
 .tour-noscript { position: fixed; inset: 40% 24px auto; background: #1e213d; text-align: center; }
 .tour-noscript a { color: #f2c244; }
-.offline-panel { position: relative; flex: 0 0 auto; font-size: 14px; }
-.offline-panel summary { padding: 10px 14px; border: 1px solid #69708a; border-radius: 24px; cursor: pointer; list-style: none; }
-.offline-panel summary::-webkit-details-marker { display: none; }
-.offline-panel summary:hover, .offline-panel[open] summary { border-color: #f2c244; color: #f2c244; }
-.offline-panel__body { position: absolute; top: calc(100% + 12px); right: 0; width: min(410px, calc(100vw - 40px)); max-height: calc(100dvh - 130px); overflow-y: auto; padding: 24px; border: 1px solid #69708a; border-radius: 16px; background: #1e213d; box-shadow: 0 16px 48px #0006; }
-.offline-panel h2 { margin: 0 0 16px; font-size: 21px; line-height: 1.3; }
-.offline-panel p { margin: 12px 0; line-height: 1.6; }
-.offline-panel .offline-panel__hint { color: #b6bdce; font-size: 12px; }
-#offline-status { font-weight: 500; }
-#offline-progress { display: block; width: 100%; height: 8px; margin: 16px 0; accent-color: #f2c244; }
-.offline-panel__actions { display: flex; flex-wrap: wrap; gap: 10px; }
-.offline-panel button { padding: 12px 16px; border: 0; border-radius: 24px; background: #f2c244; color: #1e213d; font: inherit; cursor: pointer; }
-.offline-panel button:disabled { opacity: .5; cursor: default; }
-.offline-panel #offline-cancel { border: 1px solid #69708a; background: transparent; color: #f2f3f7; }
-.offline-panel .offline-panel__download { display: inline-block; margin-top: 10px; line-height: 1.5; font-size: 13px; }
-.offline-panel :is(summary, button):focus-visible { outline: 2px solid #f2c244; outline-offset: 4px; }
-.offline-badge { color: #f2c244; font-size: 13px; }
-[hidden] { display: none !important; }
 @media (max-width: 540px) {
   .tour-bar { flex-wrap: wrap; gap: 4px 16px; padding-top: 8px; padding-bottom: 12px; }
-  .tour-bar h1 { order: 3; flex-basis: 100%; font-size: 13px; }
-  .offline-panel { margin-left: auto; }
-  .offline-panel__body { max-height: calc(100dvh - 140px); }
+  .tour-bar h1 { font-size: 13px; }
 }
