@@ -1,0 +1,28 @@
+@font-face { font-family: Golos; src: url('../fonts/GolosText.woff') format('woff'); font-display: swap; }
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: #1e213d; color: #f2f3f7; font-family: Golos, sans-serif; }
+body { display: flex; flex-direction: column; height: 100dvh; }
+.tour-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex: 0 0 auto;
+  padding: 16px max(20px, env(safe-area-inset-right)) 16px max(20px, env(safe-area-inset-left));
+}
+.tour-bar a { color: #f2c244; text-decoration: none; font-size: 14px; padding: 8px 0; }
+.tour-bar a:focus-visible { outline: 2px solid #f2c244; outline-offset: 4px; }
+.tour-bar h1 { margin: 0; font-size: 16px; font-weight: 500; }
+.tour-bar h1 span { color: #b6bdce; }
+#container { position: relative; flex: 1 1 auto; min-height: 0; width: 100%; overflow: hidden; background: #1e213d; }
+.tour-status { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 12px; padding: 24px; text-align: center; }
+.tour-status p { margin: 0; max-width: 42ch; line-height: 1.6; }
+.tour-status p:first-child { font-size: 24px; }
+.tour-status p + p { color: #b6bdce; font-size: 14px; }
+.tour-status button { margin-top: 12px; border: 0; border-radius: 32px; padding: 14px 22px; background: #f2c244; color: #1e213d; font: inherit; cursor: pointer; }
+.tour-noscript { position: fixed; inset: 40% 24px auto; background: #1e213d; text-align: center; }
+.tour-noscript a { color: #f2c244; }
+@media (max-width: 540px) {
+  .tour-bar { flex-wrap: wrap; gap: 4px 16px; padding-top: 8px; padding-bottom: 12px; }
+  .tour-bar h1 { font-size: 13px; }
+}

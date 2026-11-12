@@ -1,0 +1,75 @@
+.virtual-tour {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(32px, 6vw, 100px);
+  padding: clamp(64px, 8vw, 128px) var(--pad, 24px);
+  background: var(--navy, #1e213d);
+  color: var(--paper, #f2f3f7);
+  scroll-margin-top: 88px;
+}
+.virtual-tour h2 {
+  margin: 24px 0;
+  font: 400 clamp(32px, 4.2vw, 66px)/1.15 var(--f-display, sans-serif);
+  letter-spacing: -.03em;
+}
+.virtual-tour__description {
+  max-width: 43ch;
+  font: 400 clamp(16px, 1.4vw, 20px)/1.65 var(--f-text, sans-serif);
+  color: #d2d6e1;
+}
+.virtual-tour__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 32px;
+  padding: 18px 24px;
+  border-radius: 40px;
+  background: var(--ochre, #e3a63d);
+  color: var(--navy, #1e213d);
+  font: 500 16px/1.4 var(--f-text, sans-serif);
+  text-decoration: none;
+}
+.virtual-tour__link span { font-size: 24px; line-height: 1; }
+.virtual-tour__link:hover { background: #f2c244; }
+.virtual-tour__hint {
+  margin-top: 18px;
+  font: 400 12px/1.6 var(--f-text, sans-serif);
+  color: #b6bdce;
+}
+.virtual-tour__visual {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 16px;
+  color: white;
+  aspect-ratio: 4/5;
+}
+.virtual-tour__visual img { width: 100%; height: 100%; object-fit: cover; }
+.virtual-tour__visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 45%, #1e213dbb);
+}
+.virtual-tour__badge {
+  position: absolute;
+  z-index: 1;
+  left: 28px;
+  bottom: 28px;
+  font: 400 clamp(40px, 5vw, 72px)/1 var(--f-display, sans-serif);
+}
+.virtual-tour__badge span {
+  display: block;
+  margin-top: 16px;
+  font: 400 14px/1.5 var(--f-text, sans-serif);
+}
+.virtual-tour a:focus-visible { outline: 3px solid #aec7e3; outline-offset: 6px; }
+@media (max-width: 899px) {
+  .virtual-tour { grid-template-columns: 1fr; }
+  .virtual-tour__visual { aspect-ratio: 16/10; }
+  .virtual-tour__description { max-width: 55ch; }
+}
+@media (max-width: 399px) {
+  .virtual-tour__link { gap: 12px; padding: 16px 18px; font-size: 14px; }
+}

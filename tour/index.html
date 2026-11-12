@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1e213d">
+  <title>Виртуальный тур — Школа №142</title>
+  <meta name="description" content="Прогулка по школе №142: панорамы 360° и переходы между школьными пространствами.">
+  <link rel="stylesheet" href="tour.css">
+</head>
+<body>
+  <header class="tour-bar">
+    <a href="../#virtual-tour">← На сайт школы</a>
+    <h1>Школа №142 <span>· Тур 360°</span></h1>
+  </header>
+  <main id="container" aria-label="Интерактивная панорама школы">
+    <div class="tour-status" id="tour-status" role="status">
+      <p>Открываем школу…</p>
+      <p>Панорамы загружаются. Это может занять немного времени.</p>
+    </div>
+  </main>
+  <noscript><p class="tour-noscript">Для просмотра панорам включите JavaScript. <a href="../#virtual-tour">Вернуться на сайт</a></p></noscript>
+  <script src="pano2vr_player.js"></script>
+  <script src="skin.js"></script>
+  <script src="webxr/three.min.js"></script>
+  <script src="webxr/webxr-polyfill.min.js"></script>
+  <script src="tour.js"></script>
+</body>
+</html>
