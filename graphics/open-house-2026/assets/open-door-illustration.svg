@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 328 277" role="img">
+  <title>Открытая дверь</title>
+  <defs>
+    <clipPath id="door-clip"><path d="M0 0H328V277H0Z"/></clipPath>
+    <pattern id="door-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#AEC7E3" stroke-width=".8" opacity=".24"/>
+    </pattern>
+  </defs>
+  <g clip-path="url(#door-clip)">
+    <path d="M101 0H328V277H58V75Z" fill="url(#door-grid)" opacity=".48"/>
+    <path d="M12 135L183 44L354 135M38 149L183 72L328 149M65 163L183 100L301 163"
+      fill="none" stroke="#AEC7E3" stroke-width="1.6" opacity=".56"/>
+    <path d="M206 109L312 50L343 67V259L206 237Z" fill="#813630"/>
+    <path d="M206 109L312 50L343 67M312 50V244" fill="none" stroke="#D89585" stroke-width="1" opacity=".7"/>
+    <path d="M299 117L339 95M299 132L339 110M299 147L339 125M299 162L339 140"
+      fill="none" stroke="#DB9A86" stroke-width="1.05" opacity=".6"/>
+    <path d="M121 221H230L359 277H24Z" fill="#303652"/>
+    <path d="M118 242H267M86 261H310M53 277H355M149 236L113 277M202 236L227 277"
+      fill="none" stroke="#AEC7E3" stroke-width="1" opacity=".45"/>
+    <path d="M111 229V109H230V229H217V121H124V229Z" fill="#AEC7E3"/>
+    <path d="M124 121H217V229H124Z" fill="#2C3455"/>
+    <path d="M136 229V134H189V229" fill="none" stroke="#AEC7E3" stroke-width="1.2" opacity=".5"/>
+    <path d="M148 221V145H178V220" fill="none" stroke="#AEC7E3" stroke-width="1.2" opacity=".5"/>
+    <path d="M125 229H217L233 236H113Z" fill="#D6E2EE"/>
+    <path d="M217 122L272 91L280 95V247L272 252L217 229Z" fill="#C97B45"/>
+    <path d="M217 122L272 91V252L217 229Z" fill="#E3A63D"/>
+    <path d="M226 128L263 108V240L226 224Z" fill="none" stroke="#1E213D" stroke-width="1" opacity=".4"/>
+    <circle cx="254" cy="178" r="4" fill="#1E213D"/>
+    <path d="M171 239L156 252V264H242L272 277" fill="none" stroke="#E3A63D" stroke-width="2"/>
+  </g>
+</svg>
