@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 252 104">
+  <title>Ритм окон школьного фасада</title>
+  <g fill="none" stroke="#AEC7E3" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M3 100V15H211M21 100V33H229M39 100V51H247" opacity=".84"/>
+  <path d="M125 15H176" stroke="#E3A63D" stroke-width="1.6"/>
+</g>
+<circle cx="247" cy="51" r="3.4" fill="#813630"/>
+</svg>
