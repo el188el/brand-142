@@ -10,7 +10,7 @@
 }
 .virtual-tour h2 {
   margin: 24px 0;
-  font: 400 clamp(32px, 4.2vw, 66px)/1.15 var(--f-display, sans-serif);
+  font: 700 clamp(32px, 4.2vw, 66px)/1.15 var(--f-display, sans-serif);
   letter-spacing: -.03em;
 }
 .virtual-tour__description {
@@ -57,7 +57,7 @@
   z-index: 1;
   left: 28px;
   bottom: 28px;
-  font: 400 clamp(40px, 5vw, 72px)/1 var(--f-display, sans-serif);
+  font: 700 clamp(40px, 5vw, 72px)/1 var(--f-display, sans-serif);
 }
 .virtual-tour__badge span {
   display: block;

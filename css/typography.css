@@ -52,3 +52,9 @@
   .graphic-edition .merch__title { font-size: 28px; }
   .graphic-edition .type-poster__glyph { font-size: 130px; }
 }
+@media (max-width: 359px) {
+  .graphic-edition .hero__title { font-size: clamp(26px, 8.15vw, 28px); }
+  .graphic-edition .corp__title { font-size: clamp(27px, 8.45vw, 30px); }
+  .graphic-edition .merch__title { font-size: clamp(24px, 7.65vw, 27px); }
+  .graphic-panel__message p { font-size: clamp(29px, 9.25vw, 33px); }
+}

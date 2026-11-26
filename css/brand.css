@@ -2,7 +2,7 @@
 .brand-world{padding:clamp(80px,10vw,160px) clamp(20px,4vw,80px) clamp(90px,12vw,180px);background:var(--paper);color:var(--ink)}
 .brand-world__head{display:grid;grid-template-columns:minmax(0,1fr) minmax(220px,320px);gap:24px 64px;align-items:end;margin-bottom:clamp(48px,6vw,96px)}
 .brand-world__head .eyebrow{grid-column:1/-1;margin:0}
-.brand-world__title{font:400 clamp(32px,4.6vw,72px)/1.1 var(--f-display);letter-spacing:-.025em;margin:0;max-width:20ch;text-wrap:balance}
+.brand-world__title{font:700 clamp(32px,4.6vw,72px)/1.1 var(--f-display);letter-spacing:-.025em;margin:0;max-width:20ch;text-wrap:balance}
 .brand-world__intro{font:400 16px/1.65 var(--f-text);color:var(--ink-60);margin:0;max-width:34ch}
 .brand-world__grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(32px,4.5vw,72px);align-items:start}
 .brand-world__item{margin:0;min-width:0}
@@ -27,7 +27,7 @@
 .brand-world__signal .signal-mark{fill:currentColor;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round}
 .brand-world__item.is-in .signal-roof{animation-play-state:running}
 .brand-world__signal-foot{position:absolute;left:9%;right:9%;bottom:7%;display:flex;justify-content:space-between;align-items:end;gap:14px}
-.brand-world__signal-foot strong{font:400 clamp(52px,6.5vw,100px)/1 var(--f-display);letter-spacing:-.05em;color:var(--ochre)}
+.brand-world__signal-foot strong{font:700 clamp(52px,6.5vw,100px)/1 var(--f-display);letter-spacing:-.05em;color:var(--ochre)}
 .brand-world__signal-foot span{font:500 11px/1.5 var(--f-text);max-width:11ch;text-align:right;text-transform:uppercase;letter-spacing:.06em}
 @keyframes school-roof{0%,100%{transform:translateY(-12px) scale(.96)}50%{transform:translateY(16px) scale(1.04)}}
 @media(max-width:999px){.brand-world__head{grid-template-columns:1fr;gap:24px}.brand-world__intro{max-width:48ch}.brand-world__item--campus{grid-column:8/-1}.brand-world__item--signal{grid-column:1/6;margin-top:-48px}.brand-world__item--guide{grid-column:6/-1}.brand-world__item figcaption{display:block}.brand-world__item figcaption span{display:block;margin-top:4px}}
